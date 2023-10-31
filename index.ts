@@ -15,12 +15,17 @@ client.on("ready", () => {
 
 client.on(Events.MessageCreate, async (message) => {
   if (message.author.bot) return;
+
+  /**
+   * Check if a quick reaction is needed
+   */
+  let messageWords = message.content
+    .split(" ")
+    .map((word) => word.toLowerCase());
   reactions.forEach((reaction) => {
-    if (
-      reaction.keywords.some((keyword) => message.content.includes(keyword))
-    ) {
-      message.react(reaction.reaction);
-    }
+    messageWords.forEach((word) => {
+      if (reaction.keywords.includes(word)) message.react(reaction.reaction);
+    });
   });
 });
 

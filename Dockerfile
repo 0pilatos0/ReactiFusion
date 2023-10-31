@@ -1,6 +1,6 @@
 FROM oven/bun:latest
 
-COPY ./ ./
+COPY . .
 
 RUN bun install
 

@@ -38,5 +38,77 @@
   {
     "keywords": ["party", "celebration"],
     "reaction": "🎈"
+  },
+  {
+    "keywords": ["cool", "awesome"],
+    "reaction": "😎"
+  },
+  {
+    "keywords": ["sad", "unhappy"],
+    "reaction": "😢"
+  },
+  {
+    "keywords": ["angry", "mad"],
+    "reaction": "😡"
+  },
+  {
+    "keywords": ["confused", "huh"],
+    "reaction": "😕"
+  },
+  {
+    "keywords": ["sick", "ill"],
+    "reaction": "🤢"
+  },
+  {
+    "keywords": ["sleepy", "tired"],
+    "reaction": "😴"
+  },
+  {
+    "keywords": ["sunglasses", "cool"],
+    "reaction": "😎"
+  },
+  {
+    "keywords": ["nerd", "geek"],
+    "reaction": "🤓"
+  },
+  {
+    "keywords": ["cry", "sad"],
+    "reaction": "😢"
+  },
+  {
+    "keywords": ["scream", "scared"],
+    "reaction": "😱"
+  },
+  {
+    "keywords": ["sick", "ill"],
+    "reaction": "🤢"
+  },
+  {
+    "keywords": ["sleepy", "tired"],
+    "reaction": "😴"
+  },
+  {
+    "keywords": ["sunglasses", "cool"],
+    "reaction": "😎"
+  },
+  {
+    "keywords": ["nerd", "geek"],
+    "reaction": "🤓"
+  },
+  {
+    "keywords": ["cry", "sad"],
+    "reaction": "😢"
+  },
+  {
+    "keywords": ["scream", "scared"],
+    "reaction": "😱"
+  },
+  {
+    "keywords": ["sick", "ill"],
+    "reaction": "🤢"
+  },
+  {
+    "keywords": ["sleepy", "tired"],
+    "reaction": "😴"
   }
 ]

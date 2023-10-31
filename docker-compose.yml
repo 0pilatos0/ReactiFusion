@@ -4,4 +4,4 @@ services:
       context: .
       dockerfile: Dockerfile
     volumes:
-      - ./prisma/data:/prisma/data
+      - ./prisma:/app/prisma

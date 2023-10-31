@@ -1,3 +1,5 @@
 services:
   reactifusion:
     build: .
+    volumes:
+      - ./prisma/data:/prisma/data

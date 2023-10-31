@@ -1,5 +1,7 @@
 import { Client, Events, GatewayIntentBits } from "discord.js";
 import reactions from "./reactions.json";
+import { db } from "./src/util/db";
+import { ChannelSettingService } from "./src/Service/ChannelSettingService";
 const client = new Client({
   intents: [
     GatewayIntentBits.Guilds,
@@ -20,6 +22,11 @@ client.on(Events.MessageCreate, async (message) => {
   /**
    * Check if a quick reaction is needed
    */
+  let channelSetting = await ChannelSettingService.getChannelSetting(
+    message.channel.id
+  );
+  if (channelSetting && !channelSetting.reactionsEnabled) return;
+
   let messageWords = message.content
     .split(" ")
     .map((word) => word.toLowerCase());
@@ -32,12 +39,38 @@ client.on(Events.MessageCreate, async (message) => {
 
 client.on(Events.InteractionCreate, async (interaction) => {
   if (interaction.isCommand() && interaction.commandName === "disablechannel") {
+    let channel = interaction.channel?.id;
+    let guild = interaction.guild?.id;
+
+    if (!channel || !guild) return;
+
+    let channelSetting = await ChannelSettingService.getChannelSetting(channel);
+    if (!channelSetting)
+      ChannelSettingService.createChannelSetting(channel, guild, false);
+    else {
+      channelSetting.reactionsEnabled = false;
+      ChannelSettingService.updateChannelSetting(channelSetting);
+    }
+
     await interaction.reply(
       "Automatic reactions have been disabled in this channel."
     );
   }
 
   if (interaction.isCommand() && interaction.commandName === "enablechannel") {
+    let channel = interaction.channel?.id;
+    let guild = interaction.guild?.id;
+
+    if (!channel || !guild) return;
+
+    let channelSetting = await ChannelSettingService.getChannelSetting(channel);
+    if (!channelSetting)
+      ChannelSettingService.createChannelSetting(channel, guild, true);
+    else {
+      channelSetting.reactionsEnabled = true;
+      ChannelSettingService.updateChannelSetting(channelSetting);
+    }
+
     await interaction.reply(
       "Automatic reactions have been enabled in this channel."
     );

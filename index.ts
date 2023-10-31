@@ -75,6 +75,26 @@ client.on(Events.InteractionCreate, async (interaction) => {
       "Automatic reactions have been enabled in this channel."
     );
   }
+
+  if (interaction.isCommand() && interaction.commandName === "checkchannel") {
+    let channel = interaction.channel?.id;
+    let guild = interaction.guild?.id;
+
+    if (!channel || !guild) return;
+
+    let reactionsEnabled = await ChannelSettingService.getReactionsEnabled(
+      channel
+    );
+
+    if (reactionsEnabled)
+      await interaction.reply(
+        "Automatic reactions are enabled in this channel."
+      );
+    else
+      await interaction.reply(
+        "Automatic reactions are disabled in this channel."
+      );
+  }
 });
 
 client.login(process.env.TOKEN);

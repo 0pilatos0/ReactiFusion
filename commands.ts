@@ -15,7 +15,12 @@ const enablechannel = new SlashCommandBuilder()
   .setDescription("Enable automatic reactions in this channel")
   .setDefaultMemberPermissions(PermissionFlagsBits.BanMembers);
 
-const commands = [disablechannel, enablechannel];
+const checkChannel = new SlashCommandBuilder()
+  .setName("checkchannel")
+  .setDescription("Check if automatic reactions are enabled in this channel")
+  .setDefaultMemberPermissions(PermissionFlagsBits.BanMembers);
+
+const commands = [disablechannel, enablechannel, checkChannel];
 
 const rest = new REST({ version: "10" }).setToken(process.env.TOKEN as string);
 

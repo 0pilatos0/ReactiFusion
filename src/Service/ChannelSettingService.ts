@@ -34,4 +34,12 @@ export class ChannelSettingService {
       },
     });
   }
+
+  static async getReactionsEnabled(channelId: string): Promise<boolean> {
+    const channelSetting = await this.getChannelSetting(channelId);
+    if (channelSetting === null) {
+      return true;
+    }
+    return channelSetting.reactionsEnabled;
+  }
 }

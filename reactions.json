@@ -63,10 +63,7 @@
     "keywords": ["sleepy", "tired"],
     "reaction": "😴"
   },
-  {
-    "keywords": ["sunglasses", "cool"],
-    "reaction": "😎"
-  },
+
   {
     "keywords": ["nerd", "geek"],
     "reaction": "🤓"
@@ -84,31 +81,39 @@
     "reaction": "🤢"
   },
   {
-    "keywords": ["sleepy", "tired"],
-    "reaction": "😴"
-  },
-  {
     "keywords": ["sunglasses", "cool"],
     "reaction": "😎"
   },
   {
-    "keywords": ["nerd", "geek"],
-    "reaction": "🤓"
+    "keywords": ["joyful", "happy"],
+    "reaction": "😄"
   },
   {
-    "keywords": ["cry", "sad"],
-    "reaction": "😢"
+    "keywords": ["surprised", "amazed"],
+    "reaction": "😮"
   },
   {
-    "keywords": ["scream", "scared"],
-    "reaction": "😱"
+    "keywords": ["embarrassed", "blush"],
+    "reaction": "😳"
   },
   {
-    "keywords": ["sick", "ill"],
-    "reaction": "🤢"
+    "keywords": ["thumbs down", "disapprove"],
+    "reaction": "👎"
   },
   {
-    "keywords": ["sleepy", "tired"],
-    "reaction": "😴"
+    "keywords": ["grinning", "cheerful"],
+    "reaction": "😁"
+  },
+  {
+    "keywords": ["thumbs in the middle", "neutral"],
+    "reaction": "😐"
+  },
+  {
+    "keywords": ["kiss", "love"],
+    "reaction": "😘"
+  },
+  {
+    "keywords": ["ok", "agree"],
+    "reaction": "👌"
   }
 ]

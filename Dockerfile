@@ -1,8 +1,5 @@
 FROM oven/bun:latest
 
-COPY . .
-RUN bun install
-
 # https://github.com/oven-sh/bun/issues/4848
 RUN apt update \
     && apt install -y curl
@@ -12,8 +9,10 @@ RUN curl -L https://raw.githubusercontent.com/tj/n/master/bin/n -o n \
     && rm n \
     && npm install -g n
 
-RUN bun commands.ts
+WORKDIR /app
+COPY . .
+RUN bun install
 
-RUN bun run prisma:generate
 
-ENTRYPOINT [ "bun", "run" , "start" ]
+RUN bunx prisma generate
+ENTRYPOINT ["bun", "run", "start"]

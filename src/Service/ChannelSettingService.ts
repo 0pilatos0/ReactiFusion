@@ -19,6 +19,7 @@ export class ChannelSettingService {
       data: {
         channelId: channelId,
         guildId: guildId,
+        reactionsEnabled: reactionsEnabled,
       },
     });
   }

@@ -30,4 +30,18 @@ client.on(Events.MessageCreate, async (message) => {
   });
 });
 
+client.on(Events.InteractionCreate, async (interaction) => {
+  if (interaction.isCommand() && interaction.commandName === "disablechannel") {
+    await interaction.reply(
+      "Automatic reactions have been disabled in this channel."
+    );
+  }
+
+  if (interaction.isCommand() && interaction.commandName === "enablechannel") {
+    await interaction.reply(
+      "Automatic reactions have been enabled in this channel."
+    );
+  }
+});
+
 client.login(process.env.TOKEN);

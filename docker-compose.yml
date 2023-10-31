@@ -1,5 +1,7 @@
 services:
   reactifusion:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile
     volumes:
       - ./prisma/data:/prisma/data

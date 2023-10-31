@@ -2,6 +2,11 @@
   "name": "reactifusion",
   "module": "index.ts",
   "type": "module",
+  "scripts": {
+    "start": "bun index.ts",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate dev --name init"
+  },
   "devDependencies": {
     "bun-types": "latest"
   },

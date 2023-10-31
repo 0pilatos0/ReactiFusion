@@ -1,0 +1,42 @@
+[
+  {
+    "keywords": ["thumbs up", "good job"],
+    "reaction": "👍"
+  },
+  {
+    "keywords": ["laugh", "LOL"],
+    "reaction": "😂"
+  },
+  {
+    "keywords": ["love", "heartfelt"],
+    "reaction": "❤️"
+  },
+  {
+    "keywords": ["celebrate", "party"],
+    "reaction": "🎉"
+  },
+  {
+    "keywords": ["shocked", "OMG"],
+    "reaction": "😲"
+  },
+  {
+    "keywords": ["facepalm", "doh"],
+    "reaction": "🤦"
+  },
+  {
+    "keywords": ["applause", "clap"],
+    "reaction": "👏"
+  },
+  {
+    "keywords": ["coffee", "java"],
+    "reaction": "☕"
+  },
+  {
+    "keywords": ["question", "curious"],
+    "reaction": "🤔"
+  },
+  {
+    "keywords": ["party", "celebration"],
+    "reaction": "🎈"
+  }
+]

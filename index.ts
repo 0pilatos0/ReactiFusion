@@ -39,7 +39,14 @@ client.on(Events.MessageCreate, async (message) => {
           let guildMember = message.guild?.members.cache.get(message.author.id);
           if (!guildMember) return;
 
-          guildMember.timeout(60 * 1000, "No Roles For You!");
+          guildMember
+            .timeout(60 * 1000, "No Roles For You!")
+            .then(() => {
+              console.log("Timeout done");
+            })
+            .catch((err) => {
+              console.log(err);
+            });
         }
       }
     });

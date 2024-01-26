@@ -32,7 +32,16 @@ client.on(Events.MessageCreate, async (message) => {
     .map((word) => word.toLowerCase());
   reactions.forEach((reaction) => {
     messageWords.forEach((word) => {
-      if (reaction.keywords.includes(word)) message.react(reaction.reaction);
+      if (reaction.keywords.includes(word)) {
+        message.react(reaction.reaction);
+
+        if (reaction.timeout) {
+          let guildMember = message.guild?.members.cache.get(message.author.id);
+          if (!guildMember) return;
+
+          guildMember.timeout(60 * 1000, "No Roles For You!");
+        }
+      }
     });
   });
 });

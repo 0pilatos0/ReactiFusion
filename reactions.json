@@ -117,7 +117,8 @@
     "reaction": "👌"
   },
   {
-    "keywords": ["role", "roles"],
-    "reaction": "🔨"
+    "keywords": ["role", "roles", "perms", "permissions", "permission"],
+    "reaction": "🔨",
+    "timeout": true
   }
 ]

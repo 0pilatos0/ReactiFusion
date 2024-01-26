@@ -115,5 +115,9 @@
   {
     "keywords": ["ok", "agree"],
     "reaction": "👌"
+  },
+  {
+    "keywords": ["role", "roles"],
+    "reaction": "🔨"
   }
 ]

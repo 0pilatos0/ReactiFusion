@@ -32,7 +32,11 @@ client.on(Events.MessageCreate, async (message) => {
     .map((word) => word.toLowerCase());
   reactions.forEach((reaction) => {
     messageWords.forEach((word) => {
-      if (reaction.keywords.includes(word)) {
+      if (
+        reaction.keywords
+          .map((reaction) => reaction.toLowerCase())
+          .includes(word)
+      ) {
         message.react(reaction.reaction);
 
         if (reaction.timeout) {

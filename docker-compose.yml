@@ -1,5 +1,6 @@
 services:
   reactifusion:
+    restart: always
     build:
       context: .
       dockerfile: Dockerfile
